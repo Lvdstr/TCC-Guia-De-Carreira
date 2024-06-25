@@ -1,7 +1,3 @@
-## técnologias usadas
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) 
-
 ## Tema
 O Guia de Carreira em Tecnologia oferece uma imersão abrangente no vasto universo da Tecnologia da Informação (TI), proporcionando uma visão detalhada das inúmeras oportunidades de carreira que definem a era digital. O ponto de partida é um quiz interativo projetado para direcionar os estudantes, com base em suas preferências e habilidades, para áreas específicas da TI, iniciando assim uma jornada de descoberta e autoconhecimento.
 
@@ -20,3 +16,7 @@ A justificativa para o desenvolvimento do projeto "Guia de Carreira em Tecnologi
 ![[[tela_inicial.JPG]]](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/tela_inicial.JPG)
 ![[[perguntas.JPG]]](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
 ![[[resultado.JPG]]](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/resultado.JPG)
+
+## técnologias usadas
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) 
