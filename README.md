@@ -1,4 +1,3 @@
-# guia de carreira em TI
 ## Tema
 O Guia de Carreira em Tecnologia oferece uma imersão abrangente no vasto universo da Tecnologia da Informação (TI), proporcionando uma visão detalhada das inúmeras oportunidades de carreira que definem a era digital. O ponto de partida é um quiz interativo projetado para direcionar os estudantes, com base em suas preferências e habilidades, para áreas específicas da TI, iniciando assim uma jornada de descoberta e autoconhecimento.
 
@@ -13,4 +12,6 @@ A metodologia adotada no guia visa orientar estudantes indecisos na área de TI,
 A justificativa para o desenvolvimento do projeto "Guia de Carreira em Tecnologia da Informação" reside na constante demanda por soluções computacionais em diversos setores, destacando a relevância da TI na sociedade contemporânea. Essa demanda evidencia a necessidade de orientar indivíduos interessados na área, dada a complexidade e incerteza associadas à escolha de carreiras em tecnologia. A falta de identificação com as profissões de TI e a evasão de alunos são desafios significativos na área. Muitos estudantes encontram dificuldades em entender as diversas carreiras disponíveis na TI e em alinhar suas aptidões individuais com as oportunidades profissionais oferecidas pelo campo tecnológico. A abordagem personalizada proposta pelo guia visa preencher essas lacunas, oferecendo uma visão detalhada das carreiras em TI e ajudando os estudantes a entenderem suas afinidades tecnológicas por meio de um quiz interativo.
 
 ## Resultados finais
+![[https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/tela_inicial.JPG]]
 ![[[tela_inicial.JPG]]](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
+![[https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/resultado.JPG]]
