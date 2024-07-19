@@ -1,0 +1,422 @@
+@font-face {
+  font-family: deca;
+  src: url(../font/LexendDeca-Light.ttf);
+}
+
+@font-face {
+  font-family: serrat;
+  src: url(../font/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../font/Poppins.ttf);
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: Poppins;
+}
+
+p{
+  font-family: serrat;
+}
+
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #064b96;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  font-weight: bold;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+
+.modal {
+  display: none; /* Oculto por padrão */
+  position: fixed; /* Fica no lugar */
+  z-index: 1; /* Sobrepõe outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  overflow: hidden; /* mudei de scroll para hidden */
+  z-index: 3;
+}
+
+/* Estilos para o conteúdo da janela modal */
+.modal-content {
+  border-radius: 30px;
+  border: 0px;
+  background-color: #fefefe;
+  margin: 5% auto; /* Margem reduzida para maior responsividade */
+  padding: 20px; /* Espaço interno para o conteúdo */
+  width: 80%; /* Largura padrão */
+  max-width: 600px; /* Largura máxima */
+  height: auto; /* Altura automática */
+  position: relative;
+  color: #033069;
+  overflow-y: auto; /* Rolagem vertical para conteúdo longo */
+  text-align: justify;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOut {
+      animation: fadeOut ease-in 1s forwards;
+    }
+
+
+/* Classe para a animação fadeIn */
+.fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+.modal-content h1{
+  font-size: 28px;
+  text-align: center;
+}
+
+/* Estilos para o botão de fechar */
+.close {
+ display: none;
+}
+
+.sla{
+  border-radius: 20px 20px 0px 0px;
+  background-color: #053d79;
+  color: white;
+  padding: 20px 0 20px 0px;
+  text-align: center;
+}
+
+.sla2{
+  padding: 15px;
+}
+
+/* css da modal */
+
+.container{
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  position:relative;
+  bottom: 55px;
+}
+
+button {
+  border-radius: 2px;
+  border: 2px solid #033069;
+  background-color: rgb(255, 255, 255);
+  color: #043474;
+  font-size: 15px;
+  height: 60px;
+  width: 170px;
+  font-family: poppins;
+  cursor: pointer;
+  margin: -4px;
+  transition: 0.9s;
+  text-align: center;
+  
+}
+
+button:hover {
+  background-color: #033069;
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #033069;
+  margin: 0;
+  padding:0px;
+  border:0;
+  font: inherit;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.card_perguntas{
+  background: rgba(255, 255, 255, 0.068);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin: 40px;
+  height: 60%;
+  width: 80%;
+  position: relative;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow-x: hidden; /* esconde a barra de rolagem horinzontal */
+  min-height: 100vh;
+  background-image: linear-gradient(80deg, rgb(20, 58, 129),#002f96, rgb(59, 134, 247));
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
+}
+@keyframes color {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.card_perguntas label {
+  position: relative;
+  margin-top: 20px;
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.card_perguntas p {
+  font-size: 20px;
+  font-family: poppins;
+  text-align: justify;
+  min-height: 60px;
+  color: #ffffff;
+}
+
+.progress-container {
+  border: 2px solid white;
+  position: relative;
+  left: 10.1%;
+  margin-top: 180px;
+  border-radius: 30px;
+  padding: 2px;
+  z-index: 1;
+  height: 15%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  position: relative;
+  border-radius: 20px 0px 0px 20px;
+  background-color: #033069;
+  color: rgb(255, 255, 255);
+  visibility: visible;
+  font-family: poppins;
+  font-size: 12px;
+  transition: width 0.5s ease;
+  width: 0%; /* Largura inicial da barra de progresso */
+  overflow: hidden; /* Evita que o texto cause a quebra da linha */
+  white-space: nowrap; /* Impede a quebra de linha do texto */
+  text-overflow: ellipsis; /* Adiciona reticências caso o texto seja muito longo */
+  transition: width 0.8s;
+  height: 95%;
+}
+
+    /* scrollbar personalizada */
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  height: 15px;
+  border-radius: 12px;
+  background: linear-gradient(#053d79, #229cff);
+}
+
+.grupo_botoes{
+    position: relative;
+}
+
+  #voltarButton {
+    position: relative;
+    top: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+  #voltarButton img.icon {
+    width: 40px;
+    height: 40px;
+}
+
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+  
+}
+
+#up {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background: linear-gradient(217deg,rgba(80, 141, 255, 0.5), rgba(0, 119, 255, 0.129) 70.71%),
+          linear-gradient(127deg, rgba(117, 45, 250, 0.5), rgba(0, 119, 255, 0) 70.71%),
+          linear-gradient(336deg,rgba(45, 212, 250, 0.5), rgba(114, 114, 218, 0.167) 70.71%);
+  filter: blur(80px);
+  animation: down 15s infinite;
+}
+
+#down {
+  position: absolute;
+  right: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(10deg, rgba(45, 195, 250, 0.5),
+          rgb(58, 84, 120), rgb(73, 87, 121));
+  filter: blur(80px);
+  animation: up 30s infinite;
+}
+
+#left {
+  position: absolute;
+  height: 800px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(10deg, rgba(99, 160, 201, 0.5),
+  rgb(129, 173, 227), rgb(5, 7, 101));
+  filter: blur(80px);
+  animation: left 45s infinite;
+}
+
+#right {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-image: linear-gradient(10deg, rgba(45, 178, 250, 0.5),
+  rgb(14, 26, 62), rgb(25, 13, 133));
+  filter: blur(80px);
+  animation: right 40s infinite;
+}
+
+@keyframes down {
+
+  0%,
+  100% {
+      top: -100px;
+  }
+
+  70% {
+      top: 700px;
+  }
+}
+
+@keyframes up {
+
+  0%,
+  100% {
+      bottom: -100px;
+  }
+
+  70% {
+      bottom: 700px;
+  }
+}
+
+@keyframes left {
+
+  0%,
+  100% {
+      left: -100px;
+  }
+
+  70% {
+      left: 1300px;
+  }
+}
+
+@keyframes right {
+
+  0%,
+  100% {
+      right: -100px;
+  }
+
+  70% {
+      right: 1300px;
+  }
+}
+
+#sinopse{
+position: relative;
+top: 15px;
+padding: 0px 50px 0px 50px;
+}
