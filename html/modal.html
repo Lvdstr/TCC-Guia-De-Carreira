@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <style>
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOut {
+  opacity: 0;
+      animation: fadeOut ease-in 1s forwards;
+    }
+
+   /* Estilos para o botão de fechar */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: rgb(76, 218, 220);
+      text-decoration: none;
+    }
+
+    /* Estilos para a modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.357);
+    }
+
+    /* Estilos para o conteúdo da modal */
+    .modal-content {
+      background: linear-gradient(325deg, #61daff 0%, #1f75ff 55%, #61daff 90%);
+      color: white;
+      border-radius: 30px;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #c0c0c0;
+      width: 80%;
+      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.478);
+    }
+
+    /* Estilo para o título */
+    h2 {
+      text-align: center;
+      margin-top: 15px; 
+      font-size: 40px;
+      position: relative;
+    }
+
+    /* Estilo para o texto da descrição e habilidades */
+    p {
+      text-align: justify;
+      margin-bottom: 10px; /* mantendo a margem-bottom */
+      font-size: 20px;
+    }
+
+    .openModal {
+      --clr-font-main: hsla(0 0% 20% / 100);
+      --btn-bg-1: #61daff;
+      --btn-bg-2: #1f75ff;
+      --btn-bg-color: hsla(360 100% 100% / 1);
+      --radii: 0.5em;
+      cursor: pointer;
+      padding: 0.9em 1.4em;
+      min-width: 120px;
+      min-height: 44px;
+      font-size: var(--size, 1rem);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-weight: 500;
+      transition: 0.8s;
+      background-size: 280% auto;
+      background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+      border: none;
+      border-radius: var(--radii);
+      color: var(--btn-bg-color);
+      box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+      position: relative;
+      margin-top: 80px;
+      margin-left: 8px;
+      display: flex;
+    }
+
+    .openModal:hover {
+      background-position: right top;
+    }
+
+    /* Estilos para a animação fadeIn */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .fadeIn {
+      opacity: 0;
+      animation: fadeIn ease-in 1s forwards;
+    }
+
+    .fadeIn.first {
+      animation-delay: 0.25s;
+    }
+
+    .fadeIn.second {
+      animation-delay: 0.5s;
+    }
+    
+  </style>
+</head>
+<body>
+
+
+  <button class="openModal" data-valor="1">DevOps Engineer</button>
+  <button class="openModal" data-valor="2">Data Engineer</button>
+  <button class="openModal" data-valor="3">Software Developer</button>
+  <button class="openModal" data-valor="4">Web Designer</button>
+  <button class="openModal" data-valor="5">Graphic Designer</button>
+  <button class="openModal" data-valor="6">Creative Designer</button>
+  <button class="openModal" data-valor="7">Network Engineer</button>
+  <button class="openModal" data-valor="8">Network Designer</button>
+  <button class="openModal" data-valor="9">Network Specialist</button>
+  <button class="openModal" data-valor="10">Data Scientist</button>
+  <button class="openModal" data-valor="11">Data Analyst</button>
+  <button class="openModal" data-valor="12">Data Technician</button>
+  <!-- Adicione outros botões para as outras profissões aqui -->
+  
+ <div id="myModal" class="modal">
+    <div class="modal-content fadeIn">
+      <span class="close">&times;</span>
+      <h2 id="name"></h2>
+      <h2>descrição</h2>
+      <p id="descrição" class="fadeIn first">Descrição da profissão aqui...</p>
+      <h2>habilidades</h2>
+      <p id="habilidades" class="fadeIn second">Habilidades necessárias aqui...</p>
+    </div>
+  </div>
+
+<script>
+		var profissoes = {
+			DevOps_Engineer: {
+				chave1: "engenheiro devops",
+				chave2: "Um engenheiro DevOps é responsável por facilitar a colaboração e comunicação entre desenvolvimento, operações e outras partes interessadas no ciclo de vida do software, automatizando processos e implementando práticas ágeis e de entrega contínua.",
+				chave3: "Conhecimento em automação, ferramentas de integração contínua/entrega contínua (CI/CD), containers (como Docker), orquestradores de containers (como Kubernetes), infraestrutura como código (IaC), e habilidades de comunicação e colaboração."
+			},
+
+			Data_Engineer: {
+				chave1: "engenheiro de dados",
+				chave2: "Um engenheiro de dados é responsável por projetar, construir e manter pipelines de dados e sistemas de armazenamento para processamento e análise de grandes volumes de dados.",
+				chave3: "Conhecimento em bancos de dados, ferramentas de ETL (Extração, Transformação e Carregamento), linguagens de programação como Python ou Scala, computação em nuvem, e experiência em modelagem de dados."
+			},
+
+			Software_Developer: {
+				chave1: "desenvolvedor de software",
+				chave2: "Um desenvolvedor de software é responsável por projetar, desenvolver e manter sistemas de software, aplicativos ou plataformas, seguindo as melhores práticas de programação e os requisitos do cliente.",
+				chave3: "Proficiência em linguagens de programação como Java, Python, C++, etc., conhecimento em frameworks de desenvolvimento, habilidades de resolução de problemas, trabalho em equipe e familiaridade com metodologias de desenvolvimento ágil."
+			},
+
+			Web_Designer: {
+				chave1: "Web Designer",
+				chave2: "Um web designer é responsável por criar o layout visual e a experiência do usuário de sites e aplicativos da web, combinando elementos de design gráfico e conhecimento técnico em desenvolvimento web.",
+				chave3: "Proficiência em ferramentas de design gráfico (como Adobe Photoshop, Illustrator), conhecimento em HTML, CSS, JavaScript, UX/UI design, e compreensão dos princípios de design responsivo."
+			},
+
+			Graphic_Designer: {
+				chave1: "designer grafico",
+				chave2: "Um designer gráfico é responsável por criar designs visuais, como logotipos, materiais promocionais, embalagens e outros elementos de identidade visual, de acordo com as necessidades do cliente ou da marca.",
+				chave3: "Domínio de softwares de design gráfico (Photoshop, Illustrator, InDesign), criatividade, habilidades de comunicação visual, entendimento das tendências de design e capacidade de trabalhar com prazos."
+			},
+
+			Creative_Designer: {
+				chave1: "designer creativo",
+				chave2: "Um designer criativo é responsável por desenvolver conceitos e ideias inovadoras para produtos, campanhas publicitárias, experiências de marca e outras formas de comunicação visual.",
+				chave3: "Criatividade, capacidade de pensar de forma conceitual, habilidades de comunicação, domínio de ferramentas de design gráfico e conhecimento das tendências culturais e de design."
+			},
+
+			Network_Engineer: {
+				chave1: "engenheiro de redes",
+				chave2: "Um engenheiro de rede é responsável por projetar, implementar e manter infraestruturas de rede, garantindo a conectividade, segurança e desempenho de sistemas de comunicação.",
+				chave3: "Conhecimento em protocolos de rede, roteamento e comutação, segurança de rede, administração de sistemas operacionais de rede (como Cisco IOS), certificações de redes (como CCNA, CCNP) e habilidades de resolução de problemas."
+			},
+
+			Network_Designer: {
+				chave1: "designer de redes",
+				chave2: "Um designer de rede é responsável por projetar e planejar arquiteturas de rede eficientes e escaláveis, considerando requisitos de desempenho, segurança e disponibilidade.",
+				chave3: "Conhecimento em design de rede, protocolos de comunicação, segurança de rede, ferramentas de modelagem e simulação de redes, e capacidade de trabalhar em equipe com outros engenheiros e arquitetos de rede.",
+			},
+
+			Network_Specialist: {
+				chave1: "especialista de redes",
+				chave2: "Um especialista em rede é responsável por fornecer suporte técnico especializado em problemas de rede, diagnóstico de falhas, configuração e otimização de infraestrutura de rede.",
+				chave3: "Proficiência em troubleshooting de rede, familiaridade com ferramentas de monitoramento e diagnóstico de rede, habilidades de comunicação e trabalho em equipe, e certificações de redes específicas (como CCNA, CCNP)."
+			},
+
+			Data_Scientist: {
+				chave1: "cientista de dados",
+				chave2: "Um cientista de dados é responsável por analisar grandes conjuntos de dados para identificar padrões, tendências e insights que ajudem na tomada de decisões estratégicas e no desenvolvimento de modelos preditivos.",
+				chave3: "Conhecimento em estatística, machine learning, linguagens de programação como Python ou R, manipulação de dados, compreensão de algoritmos de aprendizado de máquina e habilidades de visualização de dados.",
+			},
+
+			Data_Analyst: {
+				chave1: "analista de dados",
+				chave2: "Um analista de dados é responsável por interpretar e analisar dados para identificar tendências, padrões e insights que possam ser usados para informar decisões de negócios.",
+				chave3: "Proficiência em SQL, ferramentas de visualização de dados (como Tableau, Power BI), habilidades de análise estatística, capacidade de comunicação e interpretação de dados.",
+			},
+
+			Data_Technician: {
+				chave1: "técnico de dados",
+				chave2: "Um técnico de dados é responsável por coletar, limpar e preparar dados para análise, garantindo sua integridade, qualidade e acessibilidade.",
+				chave3: "Conhecimento em ferramentas de ETL, manipulação de dados, familiaridade com bancos de dados, habilidades de resolução de problemas e atenção aos detalhes."
+			}
+		};
+  var modal = document.getElementById('myModal');
+  var btns = document.getElementsByClassName("openModal");
+  var span = document.getElementsByClassName("close")[0];
+
+  // Função para abrir o modal com o valor da função modalcontent
+  function openModal(valor) {
+    modal.style.display = "block";
+    modalContent(valor);
+  }
+
+  // Função para fechar o modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Função para fechar o modal ao clicar fora dele
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  // Função para exibir informações da profissão no modal
+  function modalContent(valor) {
+    const profissao = profissoes[Object.keys(profissoes)[valor - 1]];
+    document.getElementById("name").innerHTML = profissao.chave1;
+    document.getElementById('descrição').innerHTML = profissao.chave2;
+    document.getElementById('habilidades').innerHTML = profissao.chave3;
+   /*  essa função recebe o numero passado onclick que representa uma das profissoes no dicionario e
+		pega as informações dela como nome,descrição e habilidades,dps atualiza a modal com essas informações */
+  }
+
+  // Adicionar eventos de clique aos botões para abrir o modal com informações da profissão correspondente
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var valor = this.getAttribute("data-valor");
+      openModal(valor);
+    });
+  }
+
+  function closeModal() {
+    modal.classList.add('fadeOut'); // Adiciona a classe 'fadeOut' para iniciar a animação reversa
+    setTimeout(function() {
+      modal.style.display = "none"; // Após a animação, oculta o modal
+      modal.classList.remove('fadeOut'); // Remove a classe 'fadeOut' para que a animação possa ser aplicada novamente quando o modal for reaberto
+    }, 800); // Tempo da animação em milissegundos (corresponde ao tempo definido na animação CSS)
+  }
+
+  // Evento de clique no botão de fechar
+  span.onclick = function() {
+    closeModal();
+  }
+</script>
+
+</body>
+</html>

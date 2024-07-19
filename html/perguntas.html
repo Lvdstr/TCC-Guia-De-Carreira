@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Job[0]</title>
+    <link rel="stylesheet" href="../css/perguntas.css">
+    <link rel="icon" href="../img/icon.png">
+</head>
+<body>
+    <header><div class="header_container container">
+        <section id="up"></section>
+        <section id="down"></section>
+        <section id="left"></section>
+        <section id="right"></section></header>
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-content fadeIn">
+            <div class="sla">
+                <span class="close">&times;</span>
+                <h1>Prepare-se para o Desafio!</h1>
+                <p>Estamos prestes a começar o quiz. Concentre-se e dê o seu melhor!</p>
+            </div>
+            <div class="sla2">
+                <h1>Instruções Simples</h1>
+                <ul>
+                    <li><strong>Escolha um Ambiente Tranquilo</strong>
+                        Encontre um local silencioso onde você possa se concentrar plenamente.
+                    </li>
+                    <br>
+                    <li><strong>Responda com Honestidade</strong>
+                        Ao responder às perguntas, seja verdadeiro sobre quem você é, não sobre quem deseja se tornar no futuro.
+                    </li>
+                    <br>
+                    <li><strong>Identifique suas Inteligências</strong>
+                        Anote cuidadosamente as inteligências que mais correspondem ao seu perfil.
+                    </li>
+                    <br>
+                    <li><strong>Analise seus Potenciais</strong>
+                        Explore e interprete suas habilidades e pontos fortes.
+                    </li>
+                    <br>
+                    <li><strong>Pesquise Cursos Alinhados com suas Habilidades*</strong>
+                        Investigue a lista de cursos que melhor correspondem às suas competências e interesses.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex flex-column">
+
+        <div class="row mt-4 w-100">
+            <div class="col md-12">
+                <div class="progress-container ">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="card_perguntas mt-4">
+            <label id="titulo">PERGUNTA 1</label>
+            <p id="sinopse">
+                Você gosta de criar interfaces visualmente atraentes e intuitivas
+            </p>
+            <div class="grupo_botoes">
+              
+                <button onclick="trocarConteudo(1)" id="button1">Concordo Plenamente</button>
+                <button onclick="trocarConteudo(2)" id="button2">Concordo Parcialmente</button>
+                <button onclick="trocarConteudo(3)" id="button3">Discordo Parcialmente</button>
+                <button onclick="trocarConteudo(4)" id="button4">Discordo Plenamente</button>
+            </div>
+              <button onclick="voltarConteudo()" id="voltarButton" style="display: none;">
+                <img src="../img/keyboard_backspace_24dp_FILL0_wght400_GRAD0_opsz24.png" class="icon" width="50" height="50" alt="Voltar">
+            </button>
+        </div>
+        <div class="row mt-4">
+            <div class="col md-12">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/perguntas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
