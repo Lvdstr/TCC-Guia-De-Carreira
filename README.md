@@ -1,6 +1,5 @@
 # Tema
 O Guia de Carreira em Tecnologia oferece uma imersão abrangente no vasto universo da Tecnologia da Informação (TI), proporcionando uma visão detalhada das inúmeras oportunidades de carreira que definem a era digital. O ponto de partida é um quiz interativo projetado para direcionar os estudantes, com base em suas preferências e habilidades, para áreas específicas da TI, iniciando assim uma jornada de descoberta e autoconhecimento.
-![image](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
 
 # Ojetivos
 O objetivo geral deste projeto é fornecer um guia completo para carreiras em TI, orientando estudantes e aspirantes na escolha e no desenvolvimento de trajetórias bem-sucedidas.
@@ -17,6 +16,10 @@ A falta de identificação com as profissões de TI e a evasão de alunos são d
 A abordagem personalizada proposta pelo guia visa preencher essas lacunas, oferecendo uma visão detalhada das carreiras em TI e ajudando os estudantes a entenderem suas afinidades tecnológicas por meio de um quiz interativo.
 
 # Resultados Finais
+![pagina inicial](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
+![perguntas](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
+![resultado](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
+![sobre nós](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
 
 # Referencias
 CORDAS, Vilma Fernandes Capela; PETEROSSI, Helena Gemignani. Os Estudantes De Tecnologia E Suas Escolhas: Um Estudo De Maturidade Vocacional. s.d. 10f. Programa de Mestrado do Centro Paula Souza, São Paulo.
