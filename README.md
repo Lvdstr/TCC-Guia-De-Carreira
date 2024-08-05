@@ -16,10 +16,10 @@ A falta de identificação com as profissões de TI e a evasão de alunos são d
 A abordagem personalizada proposta pelo guia visa preencher essas lacunas, oferecendo uma visão detalhada das carreiras em TI e ajudando os estudantes a entenderem suas afinidades tecnológicas por meio de um quiz interativo.
 
 # Resultados Finais
-![pagina inicial](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
+![pagina inicial](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/tela_inicial.JPG)
 ![perguntas](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
-![resultado](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
-![sobre nós](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/perguntas.JPG)
+![resultado](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/resultado.JPG)
+![sobre nós](https://github.com/Lvdstr/TCC-Guia-De-Carreira/blob/main/sobre.JPG)
 
 # Referencias
 CORDAS, Vilma Fernandes Capela; PETEROSSI, Helena Gemignani. Os Estudantes De Tecnologia E Suas Escolhas: Um Estudo De Maturidade Vocacional. s.d. 10f. Programa de Mestrado do Centro Paula Souza, São Paulo.
